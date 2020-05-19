@@ -1,0 +1,27 @@
+1588834067281	Delete element
+1588836234585	Delete element
+1588836261255	Copy compilation unit
+1588836264377	Delete element
+1588838950468	Extract local variable 'response'
+1588838994278	Extract local variable 'entity'
+1588839156454	Extract local variable 'string'
+1588856535275	Extract local variable 'response'
+1588856577340	Extract local variable 'entity'
+1588856614015	Extract local variable 'entity'
+1588856873673	Extract local variable 'entrySet'
+1588858537056	Extract local variable 'execute'
+1588858611982	Extract local variable 'entity'
+1588858637332	Extract local variable 's'
+1588859267562	Extract local variable 'result'
+1588859855517	Delete element
+1588862883943	Extract local variable 'object'
+1588865883417	Extract local variable 'json'
+1588865912280	Extract local variable 'itemDesc'
+1588905993740	Copy file
+1588905996874	Delete element
+1588906291525	Delete element
+1588919920237	Copy file
+1588929444059	Extract local variable 'json'
+1588930771532	Extract local variable 'doPost'
+1588944606027	Extract local variable 'doPost'
+1588995132630	Extract local variable 'result'

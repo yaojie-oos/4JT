@@ -1,0 +1,32 @@
+#编辑环境默认值
+spring:
+  profiles:
+    active: dev
+#1.使用yml文件有层级结构 缩进
+#2.使用yml文件key value 使用冒号连接
+#3.在进行赋值时，冒号后面必须加空格
+--- #环境分割线
+spring:
+  profiles: dev
+server:
+  port: 8080
+  servlet:
+    context-path: /jt
+#为user属性赋值,可以编辑中文
+user:
+  id: 1
+  username: yaojie
+  age: 25
+
+---
+spring:
+  profiles: prod
+server:
+  port: 8090
+  servlet:
+    context-path: /jt
+    
+user:
+  id: 2
+  username: haige
+  age: 27

@@ -1,0 +1,10 @@
+package com.jt.service;
+
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.jt.vo.SysResult;
+
+public interface UserService {
+
+	SysResult check(String param, String type);
+
+}

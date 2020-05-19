@@ -1,0 +1,86 @@
+package com.jt.service;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.alibaba.dubbo.config.annotation.Service;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.jt.mapper.OrderItemMapper;
+import com.jt.mapper.OrderMapper;
+import com.jt.mapper.OrderShippingMapper;
+import com.jt.pojo.Order;
+import com.jt.pojo.OrderItem;
+import com.jt.pojo.OrderShipping;
+
+@Service(timeout = 3000)
+public class DubboOrderServiceImpl implements DubboOrderService {
+	@Autowired
+	private OrderMapper orderMapper;
+	
+	@Autowired
+	private OrderItemMapper orderItemMapper;
+	
+	@Autowired
+	private OrderShippingMapper orderShippingMapper;
+
+	
+	/**
+	 * 一个业务逻辑要操作3张表
+	 * 1.添加事务控制
+	 * 2.表数据的分析 order orderItem orderShipping
+	 * 3.准备orderId 用户id+当前时间戳
+	 * 4.操作3个mapper分别入库
+	 */
+	@Override
+	@Transactional
+	public String insertOrder(Order order) {
+		//1.获取orderId
+		String orderId = ""+order.getUserId()+System.currentTimeMillis();
+		Date date = new Date();
+		
+		//2.订单入库
+		order.setOrderId(orderId)
+			 .setStatus(1)
+			 .setCreated(date)
+			 .setUpdated(date);
+		orderMapper.insert(order);
+		System.out.println("订单入库成功");
+		
+		//3.入库订单物流
+		OrderShipping orderShipping = order.getOrderShipping();
+		orderShipping.setOrderId(orderId)
+		.setCreated(date).setUpdated(date);
+		orderShippingMapper.insert(orderShipping);
+		System.out.println("订单物流入库成功");
+
+		
+		//4.入库订单商品
+		//4.1自己遍历集合分别入库
+		//或者自己编辑sql语句批量入库
+		//insert into tb_item (xxxx,xxxx) values(xxxx,xxxx),(xxxx,xxxx )
+		List<OrderItem> orderList = order.getOrderItems();
+		for (OrderItem orderItem : orderList) {
+			orderItem.setOrderId(orderId)
+					.setCreated(date)
+					.setUpdated(date);
+			orderItemMapper.insert(orderItem);
+		}
+		System.out.println("订单商品入库成功");
+		return orderId;
+	}
+
+
+	@Override
+	public Order queryOrder(Long id) {
+		Order order = orderMapper.selectById(id);
+		OrderShipping orderShipping = orderShippingMapper.selectById(id);
+		QueryWrapper<OrderItem> queryWrapper = new QueryWrapper<OrderItem>();
+		queryWrapper.eq("order_id", id);
+		List<OrderItem> list = orderItemMapper.selectList(queryWrapper);
+		order.setOrderItems(list).setOrderShipping(orderShipping);
+		return order;
+	}
+}

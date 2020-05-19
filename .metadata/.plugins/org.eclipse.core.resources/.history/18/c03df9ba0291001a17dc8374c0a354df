@@ -1,0 +1,29 @@
+package com.jt.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.jt.service.UserService;
+import com.jt.vo.SysResult;
+
+@RestController
+@RequestMapping("/user/check/")
+public class UserController {
+	
+	@Autowired
+	private UserService userService;
+	
+	@RequestMapping("{param}/{type}")
+	public SysResult check(@PathVariable String param,@PathVariable String type) {
+		
+		return userService.check(param,type);
+		
+	}
+	
+	
+	
+	
+}

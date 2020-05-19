@@ -1,0 +1,33 @@
+package com.jt.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.jt.service.UserService;
+import com.jt.vo.SysResult;
+
+@Controller
+@RequestMapping("/user/")
+public class UserController {
+	
+	@Autowired
+	private UserService userService;
+	
+	@RequestMapping("{page}")
+	public String index(@PathVariable String page) {
+		return page;
+	}
+	
+	@RequestMapping("doRegister")
+	public SysResult doRegister(User user) {
+		try {
+			userService.doRegister();
+			return SysResult.ok();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return SysResult.fail();
+		}
+	}
+}

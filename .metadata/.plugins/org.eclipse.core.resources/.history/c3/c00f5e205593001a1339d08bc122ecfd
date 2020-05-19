@@ -1,0 +1,8 @@
+package jt.com.service;
+
+import com.alibaba.dubbo.config.annotation.Service;
+import com.jt.service.DubboCartService;
+@Service
+public class DubboCartServiceImpl implements DubboCartService {
+
+}

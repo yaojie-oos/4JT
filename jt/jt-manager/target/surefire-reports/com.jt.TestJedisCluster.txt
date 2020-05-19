@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.jt.TestJedisCluster
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 12.392 s <<< FAILURE! - in com.jt.TestJedisCluster
+testJedisCluster(com.jt.TestJedisCluster)  Time elapsed: 12.241 s  <<< ERROR!
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at com.jt.TestJedisCluster.testJedisCluster(TestJedisCluster.java:22)
+

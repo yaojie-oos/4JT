@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;userList&apos; from expression &apos;userService.findAll()&apos;&#x0D;&#x0A;- Original project: &apos;springboot-web&apos;&#x0D;&#x0A;- Variable name: &apos;userList&apos;&#x0D;&#x0A;- Destination method: &apos;com.jt.controller.UserController.userList()&apos;&#x0D;&#x0A;- Variable expression: &apos;userService.findAll()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;userList&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jt.controller{UserController.java" name="userList" replace="true" selection="946 0" stamp="1587609980527" varType="false" version="1.0"/>
+</session>

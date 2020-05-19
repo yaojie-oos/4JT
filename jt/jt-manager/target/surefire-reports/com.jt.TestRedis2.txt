@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.jt.TestRedis2
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 6 s <<< FAILURE! - in com.jt.TestRedis2
+testHash(com.jt.TestRedis2)  Time elapsed: 1.997 s  <<< ERROR!
+redis.clients.jedis.exceptions.JedisConnectionException: Failed connecting to host 192.168.112.129:6379
+	at com.jt.TestRedis2.testHash(TestRedis2.java:13)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at com.jt.TestRedis2.testHash(TestRedis2.java:13)
+
+list(com.jt.TestRedis2)  Time elapsed: 2.002 s  <<< ERROR!
+redis.clients.jedis.exceptions.JedisConnectionException: Failed connecting to host 192.168.112.129:6379
+	at com.jt.TestRedis2.list(TestRedis2.java:24)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at com.jt.TestRedis2.list(TestRedis2.java:24)
+
+transaction(com.jt.TestRedis2)  Time elapsed: 2.001 s  <<< ERROR!
+redis.clients.jedis.exceptions.JedisConnectionException: Failed connecting to host 192.168.112.129:6379
+	at com.jt.TestRedis2.transaction(TestRedis2.java:33)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at com.jt.TestRedis2.transaction(TestRedis2.java:33)
+

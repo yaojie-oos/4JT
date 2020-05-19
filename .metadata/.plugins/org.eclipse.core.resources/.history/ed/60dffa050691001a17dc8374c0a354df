@@ -1,0 +1,37 @@
+package com.jt.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.jt.mapper.UserMapper;
+import com.jt.pojo.User;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired
+	private UserMapper userMapper;
+
+	@Override
+	public boolean check(String param, Integer type) {
+		boolean flag = false;
+		if(type==1) {
+			QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
+			queryWrapper.eq("username", param);
+			User user = userMapper.selectOne(queryWrapper);
+			if(user==null) {
+				flag = false;
+				
+			}else {
+				flag = true;
+			}
+		}
+		return flag;
+			
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,9 @@
+package com.jt.service;
+
+import com.jt.vo.Result;
+
+public interface UserService {
+
+	Result check(String param, String type);
+
+}

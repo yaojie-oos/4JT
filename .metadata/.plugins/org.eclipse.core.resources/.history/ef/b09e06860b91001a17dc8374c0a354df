@@ -1,0 +1,19 @@
+package com.jt.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jt.service.UserService;
+import com.jt.utils.HttpClientService;
+@Service
+public class UserServiceImpl implements UserService {
+	@Autowired
+	private HttpClientService httpClientService;
+
+	@Override
+	public void doRegister() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

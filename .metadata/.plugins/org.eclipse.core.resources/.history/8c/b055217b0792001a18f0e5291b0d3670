@@ -1,0 +1,5 @@
+package com.jt.Mapper;
+
+public interface UserMapper {
+
+}

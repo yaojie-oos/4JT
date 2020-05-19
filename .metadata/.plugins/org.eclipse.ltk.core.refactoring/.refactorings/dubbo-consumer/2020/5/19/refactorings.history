@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.jt&apos; to &apos;dubbo-provider/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;dubbo-consumer&apos;&#x0D;&#x0A;- Destination element: &apos;dubbo-provider/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;dubbo-consumer/src/main/java/com.jt&apos;" description="Copy package" destination="=dubbo-provider/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jt" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1589037832337" version="1.0"/>
+</session>

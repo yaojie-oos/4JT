@@ -1,0 +1,19 @@
+INDEX VERSION 1.131
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2094909933.index
+\jt-web\src\main\java
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4006265491.index
+\jt-manager\src\main\java
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3471439755.index
+\jt-web\src\main\java
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\542825819.index
+\jt-manager\src\main\java
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3329428440.index
+\springboot-web\src\main\java
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2207517026.index
+\jt-web\src\main\java
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3662885716.index
+\jt-manager\src\main\java
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2524664005.index
+\jt-web\src\main\java
+F:\4京淘\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\119716390.index
+\jt-manager\src\main\java

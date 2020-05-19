@@ -1,0 +1,9 @@
+1588561174658	Extract local variable 'keyType'
+1588561425630	Extract local variable 'args'
+1588562159248	Extract local variable 'json'
+1588562882953	Extract local variable 'object'
+1588665280275	Extract local variable 'jedis'
+1588665292173	Extract local variable 'reuslt'
+1588747732839	Delete element
+1588834512312	Delete element
+1588834515829	Delete element

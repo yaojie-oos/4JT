@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=jt-manager/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jt.service{FileService.java[FileService" modifiers="513" timestamp="1587869561761"/>
+<typeInfo handle="=jt-web/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jt.service{ItemService.java[ItemService" modifiers="513" timestamp="1588865021311"/>
+<typeInfo handle="=jt-web/F:\/Java\/lib\/jrt-fs.jar`java.desktop=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/13\/docs\/api\/=/&lt;java.awt.event(ItemListener.class[ItemListener" modifiers="1537" timestamp="1570200791103"/>
+<typeInfo handle="=jt-web/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jt.service{ItemDescService.java[ItemDescService" modifiers="513" timestamp="1588865715014"/>
+<typeInfo handle="=jt-web/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jt.service{UserService.java[UserService" modifiers="513" timestamp="1588946022977"/>
+<typeInfo handle="=jt-web/F:\/Java\/lib\/jrt-fs.jar`java.base=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/13\/docs\/api\/=/&lt;java.nio.file.attribute(UserDefinedFileAttributeView.class[UserDefinedFileAttributeView" modifiers="1537" timestamp="1570200791103"/>
+<typeInfo handle="=dubbo-consumer/D:\/maven\/repository\/com\/alibaba\/dubbo\/2.6.2\/dubbo-2.6.2.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/com.alibaba=/=/maven.artifactId=/dubbo=/=/maven.version=/2.6.2=/=/maven.scope=/compile=/&lt;com.alibaba.dubbo.rpc.cluster(LoadBalance.class[LoadBalance" modifiers="1537" timestamp="1589020619582"/>
+<typeInfo handle="=jt-common/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jt.service{DubboCartService.java[DubboCartService" modifiers="513" timestamp="1589189213419"/>
+<typeInfo handle="=jt-common/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jt.service{DubboOrderService.java[DubboOrderService" modifiers="513" timestamp="1589273927339"/>
+</typeInfoHistroy>

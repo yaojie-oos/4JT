@@ -1,0 +1,14 @@
+package jt.com.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.alibaba.dubbo.config.annotation.Service;
+import com.jt.mapper.CartMapper;
+import com.jt.service.DubboCartService;
+@Service(timeout = 3000)
+public class DubboCartServiceImpl implements DubboCartService {
+	@Autowired
+	private CartMapper cartMapper;
+	
+	
+}

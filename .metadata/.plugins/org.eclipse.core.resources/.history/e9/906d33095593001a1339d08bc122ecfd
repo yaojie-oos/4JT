@@ -1,0 +1,7 @@
+package jt.com.service;
+
+import com.jt.service.DubboCartService;
+
+public class DubboCartServiceImpl implements DubboCartService {
+
+}

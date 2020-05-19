@@ -1,0 +1,9 @@
+package com.jt.service;
+
+import com.fasterxml.jackson.databind.util.JSONPObject;
+
+public interface UserService {
+
+	JSONPObject check(String param, Integer type);
+
+}

@@ -1,0 +1,20 @@
+package com.jt.util;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
+import redis.clients.jedis.JedisCluster;
+
+public class CookieUtils {
+	public static String getUserJSON(HttpServletRequest request,JedisCluster jedisCluster) {
+		Cookie[] cookies = request.getCookies();
+		String token = null;
+		for(Cookie c : cookies) {
+			if("JT_TICKET".equals(c.getName())) {
+				token = c.getValue();
+			}
+		}
+		String json = jedisCluster.get(token);
+		return json;
+	}
+}

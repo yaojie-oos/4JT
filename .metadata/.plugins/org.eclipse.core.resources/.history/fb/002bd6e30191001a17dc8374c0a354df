@@ -1,0 +1,40 @@
+package com.jt.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.springframework.stereotype.Service;
+
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.jt.mapper.UserMapper;
+import com.jt.pojo.User;
+import com.jt.util.ObjectMapperUtils;
+import com.jt.vo.Result;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired
+	private UserMapper userMapper;
+
+	@Override
+	public JSONPObject check(String param, String type) {
+		Result result = new Result();
+		if(Integer.parseInt(type)==1) {
+			QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
+			queryWrapper.eq("username", param);
+			User user = userMapper.selectOne(queryWrapper);
+			if(user==null) {
+				result.setData(true);
+				
+			}else {
+				result.setData(false);
+			}
+		}
+			
+		return new JSONPObject("callback", result) ;
+	}
+	
+	
+	
+}

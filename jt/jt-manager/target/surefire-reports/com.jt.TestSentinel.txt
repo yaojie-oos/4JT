@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.jt.TestSentinel
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.997 s <<< FAILURE! - in com.jt.TestSentinel
+testSentinel(com.jt.TestSentinel)  Time elapsed: 1.997 s  <<< ERROR!
+redis.clients.jedis.exceptions.JedisConnectionException: All sentinels down, cannot determine where is mymaster master is running...
+	at com.jt.TestSentinel.testSentinel(TestSentinel.java:19)
+

@@ -1,0 +1,23 @@
+package com.jt.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class ItemController {
+
+	/**
+	 * 根据商品id查询后台服务器
+	 * 1.在前台service中实现httpClient调用
+	 * 2.后台根据id查询数据库返回json串
+	 * 3.前台将json转化为item对象
+	 * 4.将item对象保存到request域中
+	 * 5.返回页面的逻辑名称
+	 */
+	@RequestMapping("/items/{id}")
+	public String findItemById(@PathVariable long id) {
+		return "item";
+	}
+}

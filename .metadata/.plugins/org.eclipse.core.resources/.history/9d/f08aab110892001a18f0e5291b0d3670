@@ -1,0 +1,22 @@
+package com.jt.ServiceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.dubbo.config.annotation.Service;
+import com.jt.Mapper.UserMapper;
+import com.jt.service.UserService;
+
+@Service
+public class UserServiceImpl {
+	
+	@Autowired
+	private UserMapper userMapper;
+	
+	@Reference(timeout = 3000,check = false)
+	private UserService userService;
+	
+	
+	
+	
+}

@@ -1,0 +1,8 @@
+package com.jt.service;
+
+
+public interface UserService {
+
+	boolean check(String param, Integer type);
+
+}

@@ -1,0 +1,28 @@
+package com.jt.service.impl;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jt.pojo.User;
+import com.jt.service.UserService;
+import com.jt.util.ObjectMapperUtils;
+import com.jt.utils.HttpClientService;
+@Service
+public class UserServiceImpl implements UserService {
+	@Autowired
+	private HttpClientService httpClientService;
+
+	@Override
+	public void doRegister(String username, String password, String phone) {
+		String url = "http://sso.jt.com/user/register";
+		Map<String,String> params = new HashMap<>();
+		params.put("username", username);
+		params.put("password", password);
+		params.put("phone", phone);
+		httpClientService.doPost(url, params);
+	}
+
+}

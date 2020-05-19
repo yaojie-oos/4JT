@@ -1,0 +1,10 @@
+package com.jt.service;
+
+
+public interface UserService {
+
+	boolean check(String param, Integer type);
+
+	void insert(String username, String password, String phone);
+
+}
